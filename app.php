@@ -9,14 +9,14 @@ use Sredni\Verifier\ContainVerifier;
 use Sredni\OutputDecorator\CliOutputDecorator;
 
 $outputDecorator = new CliOutputDecorator();
-$ballGenerator = new RandomGenerator('Sredni\\Model\\Ball', 1, 99);
+$ballGenerator = new RandomGenerator('Sredni\\Model\\Ball', 1, 999);
 $containsOnlyOneVerifier = new ContainVerifier(ContainVerifier::TYPE_ONLY_ONE);
 $containsAllVerifier = new ContainVerifier(ContainVerifier::TYPE_ALL);
 $resultContainsOnlyOne = [];
 $resultContainsAll = [];
 $baskets = [];
 
-for ($i = 1; $i <= 3; $i++) {
+for ($i = 1; $i <= 30; $i++) {
 	$basket = new Basket(sprintf('Basket #%s', $i), 10);
 
 	$basket->fill($ballGenerator);
